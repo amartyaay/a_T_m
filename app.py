@@ -1,5 +1,6 @@
 import fun
 import account_handler
+import details
 while 1:
 
     n = fun.initial_input()
@@ -27,9 +28,12 @@ while 1:
             print('Invalid account number or password')
     if n == 2:
         acc = fun.account_no('new ')
-        pin = fun.pin('new ')
-        amt = fun.amount('added')
-        new_account = account_handler.Accounts(acc, pin)
-        new_account.add_account(amt)
+        if details.existing_account(acc):
+            print('Account already exists')
+        else:
+            pin = fun.pin('new ')
+            amt = fun.amount('added')
+            new_account = account_handler.Accounts(acc, pin)
+            new_account.add_account(amt)
     if n == 3:
         break

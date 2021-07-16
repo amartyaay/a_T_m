@@ -11,10 +11,7 @@ class Accounts:
         return details.pin_check(self.account_no, self.pin)
 
     def add_account(self, amount):
-        if details.existing_account(self.account_no):
-            print('account already exsists')
-        else:
-            details.add_acc(self.account_no, self.pin, amount)
+        details.add_acc(self.account_no, self.pin, amount)
 
     def check_balance(self):
         print(details.check_balance(self.account_no))
