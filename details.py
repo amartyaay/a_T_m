@@ -69,8 +69,11 @@ def withdraw(a, p, amt):
 
 
 def add_money(a, p, amt):
-    crnt_blnce = int(check_balance(a)[:-1])
-    f = open('dnt_u_dare_tch_it.mf', 'a')
-    f.write(a+":"+p+":"+str(crnt_blnce+int(amt))+"\n")
-    f.close()
-    print('Money added successfully')
+    if int(amt) > 0:
+        crnt_blnce = int(check_balance(a)[:-1])
+        f = open('dnt_u_dare_tch_it.mf', 'a')
+        f.write(a+":"+p+":"+str(crnt_blnce+int(amt))+"\n")
+        f.close()
+        print('Money added successfully')
+    else:
+        print('no negative money pls')
