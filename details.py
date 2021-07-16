@@ -12,8 +12,7 @@ def existing_account(acc_no):
     for i in file_handler():
         if int(i[0]) == int(acc_no):
             return 1
-        else:
-            return 0
+    return 0
 
 
 def pin_check(a, pin):
