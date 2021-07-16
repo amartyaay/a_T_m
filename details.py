@@ -1,5 +1,4 @@
-# f_read = open('dnt_u_dare_tch_it.mf', 'r')
-# f_append = open('dnt_u_dare_tch_it.mf', 'a')0
+
 def file_handler():
     f = open('dnt_u_dare_tch_it.mf', 'r')
     details = []
@@ -7,8 +6,6 @@ def file_handler():
         details.append(i.split(':'))
     f.close()
     return details
-# print(details)
-# account_details = []
 
 
 def existing_account(acc_no):
