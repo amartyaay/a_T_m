@@ -1,9 +1,7 @@
-
-# import fun
-# account=account_handler.Accounts
+import fun
+import account_handler
 while 1:
-    import fun
-    import account_handler
+
     n = fun.initial_input()
     if n == 1:
         account_no = fun.account_no(' ')
