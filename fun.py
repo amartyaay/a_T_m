@@ -1,7 +1,7 @@
 def initial_input():
     n = int(input('''
-1 -> Login
-2 -> Signup
+1 -> LogIn
+2 -> SignUp
 3 -> Quit
 '''))
     return n
@@ -13,6 +13,7 @@ Enter 1 to display balance.
 Enter 2 to send money.
 Enter 3 to withdraw money.
 Enter 4 to add money.
+Enter 5 to LogOut.
 '''))
     return n
 

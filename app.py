@@ -9,21 +9,24 @@ while 1:
         pin = fun.pin(' ')
         account = account_handler.Accounts(account_no, pin)
         if account.check_account():
-            user_input = fun.existing_user_input()
-            if user_input == 1:
-                account.check_balance()
-            elif user_input == 2:
-                amount = fun.amount('send')
-                recipient = (input('Enter recipient acc no\t'))
-                account.send_money(amount, recipient)
-            elif user_input == 3:
-                amount = fun.amount('withdrawn')
-                account.withdraw(amount)
-            elif user_input == 4:
-                amount = fun.amount('added')
-                account.add_money(amount)
-            else:
-                print('Invalid Input')
+            while 1:
+                user_input = fun.existing_user_input()
+                if user_input == 1:
+                    account.check_balance()
+                elif user_input == 2:
+                    amount = fun.amount('send')
+                    recipient = (input('Enter recipient acc no\t'))
+                    account.send_money(amount, recipient)
+                elif user_input == 3:
+                    amount = fun.amount('withdrawn')
+                    account.withdraw(amount)
+                elif user_input == 4:
+                    amount = fun.amount('added')
+                    account.add_money(amount)
+                elif user_input == 5:
+                    break
+                else:
+                    print('Invalid Input')
         else:
             print('Invalid account number or password')
     if n == 2:
