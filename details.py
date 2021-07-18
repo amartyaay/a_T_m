@@ -18,7 +18,6 @@ def existing_account(acc_no):
 def pin_check(a, pin):
     for i in file_handler():
         if int(i[0]) == int(a) and int(i[1]) == int(pin):
-            # account_file_handler().append(i)
             return 1
 
 
@@ -26,7 +25,6 @@ def check_balance(a):
     balance = 0
     for i in file_handler():
         if int(i[0]) == int(a):
-            # balance += int(i[2][:-1])
             balance = i[2]
     return balance
     # return account_file_handler()[2]

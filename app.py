@@ -15,7 +15,7 @@ while 1:
                     account.check_balance()
                 elif user_input == 2:
                     amount = fun.amount('send')
-                    recipient = (input('Enter recipient acc no\t'))
+                    recipient = (input('Enter recipient account number\t'))
                     account.send_money(amount, recipient)
                 elif user_input == 3:
                     amount = fun.amount('withdrawn')
@@ -28,7 +28,7 @@ while 1:
                 else:
                     print('Invalid Input')
         else:
-            print('Invalid account number or password')
+            print('Invalid account number or pin')
     if n == 2:
         acc = fun.account_no('new ')
         if details.existing_account(acc):
