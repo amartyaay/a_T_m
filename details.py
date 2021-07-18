@@ -35,14 +35,14 @@ def send(a, p, amount, r):
     if int(amount) > crnt_blnce_sender:
         print('Not enough balance')
     else:
-        crnt_blnce_reciever = int(check_balance(r)[:-1])
+        crnt_blnce_receiver = int(check_balance(r)[:-1])
         r_pin = None
         for i in file_handler():
             if int(i[0]) == int(r):
                 r_pin = i[1]
         f = open('dnt_u_dare_tch_it.mf', 'a')
         f.write(a+":"+p+":"+str(crnt_blnce_sender-int(amount))+"\n")
-        f.write(r+":"+r_pin+":"+str(crnt_blnce_reciever+int(amount))+"\n")
+        f.write(r+":"+r_pin+":"+str(crnt_blnce_receiver+int(amount))+"\n")
         f.close()
         print('Money sent successfully')
 
